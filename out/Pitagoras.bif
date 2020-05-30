@@ -1,0 +1,53 @@
+network "Pitagoras" {
+// written by aGrUM 0.17.3
+}
+
+variable ca {
+   type discrete[2] {0, 1};
+}
+
+variable co {
+   type discrete[2] {0, 1};
+}
+
+variable h {
+   type discrete[2] {0, 1};
+}
+
+variable evca {
+   type discrete[2] {0, 1};
+}
+
+variable evco {
+   type discrete[2] {0, 1};
+}
+
+variable evh {
+   type discrete[2] {0, 1};
+}
+
+probability (ca) {
+   default 0.468176 0.531824;
+}
+probability (co) {
+   default 0.468176 0.531824;
+}
+probability (h | ca, co) {
+   (0, 0) 0.908971 0.091029;
+   (1, 0) 0.650269 0.349731;
+   (0, 1) 0.650269 0.349731;
+   (1, 1) 0.124852 0.875148;
+}
+probability (evca | ca) {
+   (0) 0.8 0.2;
+   (1) 0.1 0.9;
+}
+probability (evco | co) {
+   (0) 0.8 0.2;
+   (1) 0.1 0.9;
+}
+probability (evh | h) {
+   (0) 0.8 0.2;
+   (1) 0.1 0.9;
+}
+

@@ -1,0 +1,78 @@
+
+net {
+  name = Pitagoras;
+  software = "aGrUM 0.17.3";
+  node_size = (50 50);
+}
+
+node ca {
+   states = (0 1 );
+   label = "ca";
+   ID = "ca";
+}
+
+node co {
+   states = (0 1 );
+   label = "co";
+   ID = "co";
+}
+
+node h {
+   states = (0 1 );
+   label = "h";
+   ID = "h";
+}
+
+node evca {
+   states = (0 1 );
+   label = "evca";
+   ID = "evca";
+}
+
+node evco {
+   states = (0 1 );
+   label = "evco";
+   ID = "evco";
+}
+
+node evh {
+   states = (0 1 );
+   label = "evh";
+   ID = "evh";
+}
+
+potential (ca) {
+   data = (  0.468176 0.531824);
+}
+
+potential (co) {
+   data = (  0.468176 0.531824);
+}
+
+potential ( h | ca   co   ) {
+   data = 
+   (((   0.908971   0.091029)   % ca=0   co=0   
+   (   0.650269   0.349731))   % ca=1   co=0   
+   ((   0.650269   0.349731)   % ca=0   co=1   
+   (   0.124852   0.875148)));   % ca=1   co=1   
+}
+
+potential ( evca | ca   ) {
+   data = 
+   ((   0.8   0.2)   % ca=0   
+   (   0.1   0.9));   % ca=1   
+}
+
+potential ( evco | co   ) {
+   data = 
+   ((   0.8   0.2)   % co=0   
+   (   0.1   0.9));   % co=1   
+}
+
+potential ( evh | h   ) {
+   data = 
+   ((   0.8   0.2)   % h=0   
+   (   0.1   0.9));   % h=1   
+}
+
+
