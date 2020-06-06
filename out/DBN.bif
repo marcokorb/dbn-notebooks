@@ -38,10 +38,6 @@ variable evh0 {
    type discrete[2] {0, 1};
 }
 
-variable evhd0 {
-   type discrete[2] {0, 1};
-}
-
 variable evcat {
    type discrete[2] {0, 1};
 }
@@ -51,10 +47,6 @@ variable evcot {
 }
 
 variable evht {
-   type discrete[2] {0, 1};
-}
-
-variable evhdt {
    type discrete[2] {0, 1};
 }
 
@@ -100,10 +92,6 @@ probability (evh0 | h0) {
    (0) 0.8 0.2;
    (1) 0.1 0.9;
 }
-probability (evhd0 | h0) {
-   (0) 0.8 0.2;
-   (1) 0.1 0.9;
-}
 probability (evcat | cat) {
    (0) 0.8 0.2;
    (1) 0.1 0.9;
@@ -113,10 +101,6 @@ probability (evcot | cot) {
    (1) 0.1 0.9;
 }
 probability (evht | ht) {
-   (0) 0.8 0.2;
-   (1) 0.1 0.9;
-}
-probability (evhdt | ht) {
    (0) 0.8 0.2;
    (1) 0.1 0.9;
 }
